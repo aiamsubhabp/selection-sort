@@ -1,6 +1,20 @@
 function selectionSort(arr) {
   // type your code here
+  let orderedArr = []
+  let newArr = [...arr]
+
+  for ( let i = 0 ; i < arr.length; i++) {
+    let lowNum = Math.min(...newArr)
+    orderedArr.push(lowNum)
+
+    let index = newArr.indexOf(lowNum)
+    newArr.splice(index, 1)
+  
+
+  }
+  return orderedArr
 }
+
 
 if (require.main === module) {
   // add your own tests in here
